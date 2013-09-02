@@ -18,7 +18,7 @@ step             - step is used in conjunction with high denom count to produce
 ```
 example:
 ```
-10 1:5:10:20:50 10 10\n
+echo "10 1:5:10:20:50 10 10" | lein trampoline run | expand --tabs=20
 
 ---------------------------------------------------------------poker-chips
  General
@@ -48,25 +48,14 @@ down the value of the chip by denomination and then totals the value for
 that denomination for the initial setup. This isn't intended to track or
 keep up with points between rounds just the initial setup for players.
 
-Build around lein, so the easiest way to run it would be to do 
+I make no attemp to insert the tabs my self, 
+probably should, but didn't. I would pipe the output to expand
+
+Built around lein, so the easiest way to run it is form the root of the repo
+with the following (test-input.txt is in the root of the repo)
 ```
 # note trampoline is used here because I think stdout is swallowed otherwise
-lein trampoline run
-``` 
-in the root of the repo. Also I make no attemp to insert the tabs my self, 
-probably should so, but didn't. I would pipe the output to 
-
-```
-# note trampoline is used here because I think stdout is swallowed otherwise
-lein trampoline run | expand --tabs=20 
-```
-
-That's what I used for the output above. 
-
-For a complete example there is an include test-input file so you can do this
-
-```
-cat test-input | lein trampoline run | expand --tabs=20
+cat test-input.txt | lein trampoline run | expand --tabs=20
 ```
 
 I have more ideas for this, it was just a quick pass. I'd like to expand
