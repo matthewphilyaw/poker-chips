@@ -1,4 +1,4 @@
-(defproject poker-chips "0.1.0-SNAPSHOT"
+(defproject poker-chips "0.0.1"
   :description "Shows chip count with value of each kind of chip"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
